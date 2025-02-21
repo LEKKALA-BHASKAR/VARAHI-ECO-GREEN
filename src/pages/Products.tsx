@@ -15,6 +15,8 @@ interface OrderFormData {
   name: string;
   address: string;
   phone: string;
+  microns: string; // New field for thickness
+  quantity: string; // New field for quantity
 }
 
 const productCategories: ProductCategory[] = [
@@ -62,6 +64,8 @@ const Products: React.FC = () => {
     name: "",
     address: "",
     phone: "",
+    microns: "",
+    quantity: "",
   });
 
   // Animation variants
@@ -97,7 +101,7 @@ const Products: React.FC = () => {
     if (!selectedProduct) return;
 
     // Construct WhatsApp message
-    const message = `New Order for ${selectedProduct}\n\nName: ${formData.name}\nAddress: ${formData.address}\nPhone: ${formData.phone}`;
+    const message = `New Order for ${selectedProduct}\n\nName: ${formData.name}\nAddress: ${formData.address}\nPhone: ${formData.phone}\nMicrons: ${formData.microns || "Not specified"}\nQuantity: ${formData.quantity || "Not specified"}`;
     const whatsappNumber = "+918333876725";
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
@@ -105,7 +109,7 @@ const Products: React.FC = () => {
     window.open(whatsappUrl, "_blank");
 
     // Reset form and close modal
-    setFormData({ name: "", address: "", phone: "" });
+    setFormData({ name: "", address: "", phone: "", microns: "", quantity: "" });
     setIsModalOpen(false);
     setSelectedProduct(null);
   };
@@ -231,6 +235,35 @@ const Products: React.FC = () => {
                   value={formData.phone}
                   onChange={handleFormChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all duration-300"
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="microns" className="block text-sm font-medium text-gray-700 mb-2">
+                  Microns (if applicable)
+                </label>
+                <input
+                  type="text"
+                  id="microns"
+                  name="microns"
+                  value={formData.microns}
+                  onChange={handleFormChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all duration-300"
+                  placeholder="e.g., 30-120 for films"
+                />
+              </div>
+              <div>
+                <label htmlFor="quantity" className="block text-sm font-medium text-gray-700 mb-2">
+                  Quantity
+                </label>
+                <input
+                  type="number"
+                  id="quantity"
+                  name="quantity"
+                  value={formData.quantity}
+                  onChange={handleFormChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all duration-300"
+                  min="1"
                   required
                 />
               </div>

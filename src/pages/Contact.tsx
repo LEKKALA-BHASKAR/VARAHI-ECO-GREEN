@@ -84,19 +84,18 @@ const Contact: React.FC = () => {
             <div className="flex items-start gap-4">
               <MapPin className="w-7 h-7 text-green-600 flex-shrink-0 mt-1 transform transition-transform duration-300 hover:scale-110" />
               <p className="text-gray-700 text-lg">
-                GreenLife Solutions, Eco Park Lane, Plot 10-12, Green Valley, City, State, Country 12345
+              VARAHI ECO GREEN - NEAR PRAYAG SCHOOL ALAMPUR X ROAD  TELANGANA, INDIA  -509126
               </p>
             </div>
             <div className="flex items-center gap-4">
               <Phone className="w-7 h-7 text-green-600 flex-shrink-0 transform transition-transform duration-300 hover:scale-110" />
               <div className="space-y-2">
-                <p className="text-gray-700 text-lg">+1-234-567-8901</p>
-                <p className="text-gray-700 text-lg">+1-234-567-8902</p>
+                <p className="text-gray-700 text-lg">+91 83338 76725</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
               <Mail className="w-7 h-7 text-green-600 flex-shrink-0 transform transition-transform duration-300 hover:scale-110" />
-              <p className="text-gray-700 text-lg">info@greenlifesolutions.com</p>
+              <p className="text-gray-700 text-lg">earthgreenery57@gmail.com</p>
             </div>
 
             {/* Social Media */}

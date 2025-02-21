@@ -64,15 +64,22 @@ const AboutUs: React.FC = () => {
           <h2 className="text-4xl font-bold mb-10 text-center tracking-tight">
             Our Story
           </h2>
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto space-y-6">
             <p className="text-lg text-center leading-relaxed">
               Founded in 2020, VARAHI ECO GREEN was born from a passion to transform the packaging and consumer goods industry. Our team—environmentalists, engineers, and sustainability experts—unites to deliver eco-friendly solutions for a greener tomorrow.
             </p>
+            <div className="text-center">
+              <h3 className="text-2xl font-semibold text-green-200 mb-2">Founder & CEO</h3>
+              <p className="text-xl font-bold tracking-wide">Nayaki Pavan Kalyan</p>
+              <p className="text-base italic text-green-100 mt-2">
+                Leading the charge towards a sustainable future with vision and innovation.
+              </p>
+            </div>
           </div>
         </div>
       </motion.section>
 
-      {/* Our Impact Section (New Addition) */}
+      {/* Our Impact Section */}
       <motion.section
         initial="hidden"
         whileInView="visible"

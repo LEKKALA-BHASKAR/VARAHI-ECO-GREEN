@@ -78,7 +78,7 @@ const Index: React.FC = () => {
           >
             <h2 className="text-4xl font-bold text-green-700">Our Commitment</h2>
             <p className="text-xl text-gray-700 leading-relaxed">
-              Plastic waste is choking our oceans, harming wildlife, and polluting ecosystems. At GreenLife Solutions, we’re fighting back with 100% biodegradable, compostable products that break down naturally, returning to the earth without a trace.
+              Plastic waste is choking our oceans, harming wildlife, and polluting ecosystems. At VARAHI ECO GREEN, we’re fighting back with 100% biodegradable, compostable products that break down naturally, returning to the earth without a trace.
             </p>
             <p className="text-xl text-gray-700 leading-relaxed">
               We envision a world where sustainability isn’t a choice—it’s the norm. Our mission is to empower people and businesses to embrace a zero-waste future, one eco-friendly product at a time.
@@ -128,6 +128,50 @@ const Index: React.FC = () => {
           >
             🌿 Join the Movement: Switch to compostable alternatives today!
           </motion.p>
+        </div>
+      </section>
+
+      {/* Promises Section (New Addition) */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6">
+          <motion.h2
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={heroFade}
+            className="text-4xl font-bold text-green-700 mb-12 text-center tracking-tight"
+          >
+            Nature’s Cycle, Our Promise
+          </motion.h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {[
+              {
+                title: "Sustainability at Heart",
+                description: "We pledge to create products that return to nature, leaving no trace behind.",
+              },
+              {
+                title: "Uncompromising Quality",
+                description: "Every item is crafted with care to ensure durability and eco-friendliness.",
+              },
+              {
+                title: "Innovation for Tomorrow",
+                description: "We’re dedicated to pioneering solutions that redefine sustainable living.",
+              },
+            ].map((promise, index) => (
+              <motion.div
+                key={index}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={statFade}
+                transition={{ delay: index * 0.2 }}
+                className="p-6 bg-gradient-to-br from-green-100 to-teal-100 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 text-center"
+              >
+                <h3 className="text-xl font-semibold text-green-700 mb-3">{promise.title}</h3>
+                <p className="text-gray-600">{promise.description}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 

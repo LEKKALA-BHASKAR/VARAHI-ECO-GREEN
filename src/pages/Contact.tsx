@@ -92,6 +92,12 @@ const Contact: React.FC = () => {
               <div className="space-y-2">
                 <p className="text-gray-700 text-lg">+91 83338 76725</p>
               </div>
+               <p className="text-sm text-white/80">
+  Design & Developed By BHASKAR |  
+  <a href="https://portfoliobhaskar.vercel.app/" className="text-black-400 hover:underline ml-1">
+     Website
+  </a>
+</p>
             </div>
             <div className="flex items-center gap-4">
               <Mail className="w-7 h-7 text-green-600 flex-shrink-0 transform transition-transform duration-300 hover:scale-110" />
